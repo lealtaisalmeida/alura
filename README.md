@@ -44,5 +44,5 @@ Este projeto é uma aplicação de terminal (CLI) feita em **Java com Spring Boo
 ### 2. Clonando o projeto
 
 ```bash
-git clone https://github.com/seu-usuario/literalura.git
+git clone https://github.com/lealtaisalmeida/alura.git
 cd literalura
