@@ -1,48 +1,62 @@
-# 📚 LiterAlura - Projeto Java com Spring Boot + API Gutendex
+# Literalura
 
-Este projeto é uma aplicação de terminal (CLI) feita em **Java com Spring Boot**, que consome a API pública [Gutendex](https://gutendex.com/) (baseada no acervo do Project Gutenberg) para buscar e armazenar livros em um banco de dados PostgreSQL.
+<div align="center">
 
----
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Java Version](https://img.shields.io/badge/Java-8%2B-blue)](https://www.java.com/)
+![GitHub repo size](https://img.shields.io/github/repo-size/rodrigoborge/Literalura)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/rodrigoborge/Literalura)
 
-## 📌 Objetivo do Projeto
+</div><br>
 
-- Buscar livros por título diretamente da Gutendex API.
-- Salvar dados de livros e autores no banco de dados.
-- Exibir listagens e estatísticas de livros e autores.
-- Praticar o uso de:
-  - Spring Boot
-  - API REST com `HttpClient`
-  - Jackson para JSON
-  - JPA com PostgreSQL
-  - Menu de interação com o usuário no terminal (CLI)
-  - Streams e derived queries
+## Badge
 
----
+Este é um badge conquistado por ter desenvolvido este projeto com a Alura no programa ONE - "Oracle Next Education" em parceria com a Oracle:
 
-## 🧰 Tecnologias Utilizadas
+<div align="center">
 
-- Java 17+
-- Maven 4+
-- Spring Boot 3.2.3
-- PostgreSQL 16+
-- Spring Data JPA
-- Jackson (v2.16)
-- Java HttpClient
-- IntelliJ IDEA (opcional)
+![Badge](img/badge%20literalura.png)
 
----
+</div>
 
-## ⚙️ Configuração do Ambiente
+### Instalação
 
-### 1. Requisitos
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/rodrigoborge/literalura.git
+   cd literalura
+   ```
 
-- Java JDK 17+
-- Maven 4+
-- PostgreSQL 16+
-- IDE (como IntelliJ ou VS Code)
+2. Configure o banco de dados no arquivo `application.properties`:
+   ```properties
+   spring.datasource.url=jdbc:postgresql://localhost:5432/literalura
+   spring.datasource.username=seu-usuario
+   spring.datasource.password=sua-senha
+   spring.jpa.hibernate.ddl-auto=update
+   spring.jpa.show-sql=true
+   ```
 
-### 2. Clonando o projeto
+3. Execute o projeto:
+   ```bash
+   mvn spring-boot:run
+   ```
 
-```bash
-git clone https://github.com/lealtaisalmeida/alura.git
-cd literalura
+## Estrutura do Projeto
+
+- `br.com.alura.literalura`: Pacote principal do projeto.
+  - `principal`: Contém a classe `Principal`, que gerencia a execução da aplicação.
+  - `model`: Contém as classes de modelo (`Livro`, `Autor`, `LivroDTO`, `AutorDTO`).
+  - `repository`: Contém as interfaces de repositório Spring Data JPA.
+  - `service`: Contém as classes de serviço (`ConsumoAPI`, `ConverteDados`).
+
+## Autor
+
+Esta aplicação em Java foi desenvolvida por [Rodrigo Borge](https://github.com/rodrigoborge)
+
+## Contribuição
+
+Contribuições são bem-vindas! Sinta-se à vontade para enviar sugestões, correções de bugs ou melhorias através de issues e pull requests.
+
+## Licença
+
+Este projeto está licenciado sob a [Licença MIT](LICENSE)
